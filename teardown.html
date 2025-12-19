@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Promo Teardown</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="brand">
+    <div class="logo">🧽</div>
+    <div>
+      <h1>Promo Teardown</h1>
+      <div class="sub">Checklist + calculator</div>
+    </div>
+  </div>
+</header>
+
+<section class="card">
+  <input id="weekOf" placeholder="Week of (e.g. Jan 8)" />
+  <input id="completedBy" placeholder="Completed by" />
+</section>
+
+<section class="card">
+  <h2>🛒 Inventory</h2>
+  <label class="chk"><input type="checkbox"> Remove product from floor</label>
+  <label class="chk"><input type="checkbox"> Leave in Gaylord</label>
+  <label class="chk"><input type="checkbox"> Repallet product</label>
+
+  <div class="calc">
+    <input id="perLayer" type="number" placeholder="Units per layer">
+    <input id="layers" type="number" placeholder="Layers">
+    <div class="stat">Total: <b id="total">—</b></div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>🪑 Displays</h2>
+  <label class="chk"><input type="checkbox"> Take down tables</label>
+  <label class="chk"><input type="checkbox"> Remove blue tablecloths</label>
+  <label class="chk"><input type="checkbox"> Return buffet table</label>
+</section>
+
+<section class="card">
+  <h2>🚧 Signage</h2>
+  <label class="chk"><input type="checkbox"> Stanchions stored</label>
+  <label class="chk"><input type="checkbox"> Big promo sign returned</label>
+</section>
+
+<section class="card">
+  <h2>🎟️ Systems</h2>
+  <label class="chk"><input type="checkbox"> Tickets redeemed in Trilogy</label>
+</section>
+
+<section class="card">
+  <textarea placeholder="Notes / issues"></textarea>
+  <button onclick="copyIssue()">📋 Copy as GitHub Issue</button>
+</section>
+
+</div>
+<script src="./app.js"></script>
+</body>
+</html>
