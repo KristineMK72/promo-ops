@@ -8,58 +8,69 @@
 </head>
 <body>
 <div class="wrap">
-<header>
-  <div class="brand">
-    <div class="logo">🧽</div>
-    <div>
-      <h1>Promo Teardown</h1>
-      <div class="sub">Checklist + calculator</div>
+  <header>
+    <div class="brand">
+      <div class="logo">🧽</div>
+      <div>
+        <h1>Promo Teardown</h1>
+        <div class="sub">Close-out checklist + inventory counting</div>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<section class="card">
-  <input id="weekOf" placeholder="Week of (e.g. Jan 8)" />
-  <input id="completedBy" placeholder="Completed by" />
-</section>
+  <section class="card">
+    <h2>📅 Quick info</h2>
+    <input id="weekOf" placeholder="Week of (e.g. Jan 8)" />
+    <input id="completedBy" placeholder="Completed by" />
+  </section>
 
-<section class="card">
-  <h2>🛒 Inventory</h2>
-  <label class="chk"><input type="checkbox"> Remove product from floor</label>
-  <label class="chk"><input type="checkbox"> Leave in Gaylord</label>
-  <label class="chk"><input type="checkbox"> Repallet product</label>
+  <section class="card">
+    <h2>🛒 Product & Inventory</h2>
 
-  <div class="calc">
-    <input id="perLayer" type="number" placeholder="Units per layer">
-    <input id="layers" type="number" placeholder="Layers">
-    <div class="stat">Total: <b id="total">—</b></div>
-  </div>
-</section>
+    <label class="chk"><input type="checkbox"><span>Remove product from floor</span></label>
+    <label class="chk"><input type="checkbox"><span>Leaving product in Gaylord (count units per layer × layers)</span></label>
+    <label class="chk"><input type="checkbox"><span>Repallet / restock on pallet (count cases per layer × layers)</span></label>
+    <label class="chk"><input type="checkbox"><span>Recount leftover product and compare to start count</span></label>
 
-<section class="card">
-  <h2>🪑 Displays</h2>
-  <label class="chk"><input type="checkbox"> Take down tables</label>
-  <label class="chk"><input type="checkbox"> Remove blue tablecloths</label>
-  <label class="chk"><input type="checkbox"> Return buffet table</label>
-</section>
+    <div class="calc">
+      <div class="row">
+        <input id="perLayer" type="number" placeholder="Units per layer (ex: 12)" />
+        <input id="layers" type="number" placeholder="Layers (ex: 6)" />
+      </div>
 
-<section class="card">
-  <h2>🚧 Signage</h2>
-  <label class="chk"><input type="checkbox"> Stanchions stored</label>
-  <label class="chk"><input type="checkbox"> Big promo sign returned</label>
-</section>
+      <div class="stat">Total: <b id="total">—</b></div>
 
-<section class="card">
-  <h2>🎟️ Systems</h2>
-  <label class="chk"><input type="checkbox"> Tickets redeemed in Trilogy</label>
-</section>
+      <textarea placeholder="Count notes (ex: Gaylord — 12 per layer × 6 layers = 72)"></textarea>
+    </div>
+  </section>
 
-<section class="card">
-  <textarea placeholder="Notes / issues"></textarea>
-  <button onclick="copyIssue()">📋 Copy as GitHub Issue</button>
-</section>
+  <section class="card">
+    <h2>🪑 Tables & Display</h2>
+    <label class="chk"><input type="checkbox"><span>Take down tables</span></label>
+    <label class="chk"><input type="checkbox"><span>Remove blue tablecloths</span></label>
+    <label class="chk"><input type="checkbox"><span>Buffet table used for display brought back</span></label>
+  </section>
 
+  <section class="card">
+    <h2>🚧 Stanchions & Signage</h2>
+    <label class="chk"><input type="checkbox"><span>Stanchions put into holder</span></label>
+    <label class="chk"><input type="checkbox"><span>Big promo sign by weekly promo display brought back (to buffet area)</span></label>
+  </section>
+
+  <section class="card">
+    <h2>🎟️ Systems</h2>
+    <label class="chk"><input type="checkbox"><span>Tickets redeemed in Trilogy</span></label>
+  </section>
+
+  <section class="card">
+    <h2>📝 Notes</h2>
+    <textarea placeholder="Anything unusual / follow-ups / issues"></textarea>
+    <button onclick="copyIssue()">📋 Copy as GitHub Issue</button>
+  </section>
+
+  <footer>Now it should wrap perfectly on iPhone ✅</footer>
 </div>
+
 <script src="./app.js"></script>
 </body>
 </html>
